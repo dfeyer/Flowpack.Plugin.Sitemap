@@ -4,6 +4,7 @@ TYPO3 Neos Sitemap Plugin
 This plugin provides a typoscript-based plugin for TYPO3 Neos sitemap handling.
 
 Note: this package is still experimental and may change heavily in the near future.
+Note: this plugin as only be tested on Neos 1.2 (dev-master), with some patch currently under review.
 
 Quick start
 -----------
