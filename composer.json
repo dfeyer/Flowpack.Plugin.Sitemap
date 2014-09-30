@@ -1,0 +1,13 @@
+{
+    "name": "flowpack/plugin-sitemap",
+    "type": "typo3-flow-plugin",
+    "description": "A simple Google Sitemap plugin for TYPO3 Neos",
+    "require": {
+        "typo3/flow": "*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Flowpack\\Plugin\\Sitemap": "Classes"
+        }
+    }
+}

@@ -1,0 +1,20 @@
+root.googleSitemap {
+	condition = ${request.parentRequest.uri.path == 'sitemap.xml' || Array.last(String.split(request.parentRequest.uri.path, '/')) == 'sitemap.xml'}
+	type = 'Flowpack.Plugin.Sitemap:GoogleSiteMap'
+
+	@position = 'start'
+}
+
+
+prototype(Flowpack.Plugin.Sitemap:GoogleSiteMap) < prototype(TYPO3.TypoScript:Http.Message) {
+	httpResponseHead {
+		headers {
+			Content-Type = 'application/xml'
+		}
+	}
+	menu = TYPO3.Neos:Menu {
+		templatePath = 'resource://Flowpack.Plugin.Sitemap/Private/Templates/TypoScriptObjects/GoogleSitemap.xml'
+		maximumLevels = 20
+		renderHiddenInIndex = TRUE
+	}
+}
