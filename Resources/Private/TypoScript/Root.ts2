@@ -22,11 +22,6 @@ prototype(Flowpack.Plugin.Sitemap:GoogleSiteMap) < prototype(TYPO3.TypoScript:Ht
 		attributes = TYPO3.TypoScript:Attributes {
 			xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'
         }
-		attributes = TYPO3.TypoScript:Attributes {
-			version = '1.0'
-			encoding = 'UTF-8
-			xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'
-        }
 
 		maximumLevels = 20
 		renderHiddenInIndex = TRUE
