@@ -37,7 +37,7 @@ The sitemap rendering is based on the TypoScript Menu prototype, so can use any 
 
 ```
 prototype(Flowpack.Plugin.Sitemap:GoogleSiteMap) < prototype(TYPO3.TypoScript:Http.Message) {
-	menu {
+	urlset {
 		maximumLevels = 10
 		renderHiddenInIndex = FALSE
 	}

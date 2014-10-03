@@ -12,9 +12,25 @@ prototype(Flowpack.Plugin.Sitemap:GoogleSiteMap) < prototype(TYPO3.TypoScript:Ht
 			Content-Type = 'application/xml'
 		}
 	}
-	menu = TYPO3.Neos:Menu {
+
+	xmlProlog = '<?xml version="1.0" encoding="UTF-8"?>'
+	xmlProlog.@position = 'start 100'
+
+	urlset = TYPO3.Neos:Menu {
 		templatePath = 'resource://Flowpack.Plugin.Sitemap/Private/Templates/TypoScriptObjects/GoogleSitemap.xml'
+
+		attributes = TYPO3.TypoScript:Attributes {
+			xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'
+        }
+		attributes = TYPO3.TypoScript:Attributes {
+			version = '1.0'
+			encoding = 'UTF-8
+			xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'
+        }
+
 		maximumLevels = 20
 		renderHiddenInIndex = TRUE
+
+		@position = 'after doctype'
 	}
 }

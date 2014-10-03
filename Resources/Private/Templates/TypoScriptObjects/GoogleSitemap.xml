@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>{namespace neos=TYPO3\Neos\ViewHelpers}
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{xmlProlog -> f:format.raw()}{namespace neos=TYPO3\Neos\ViewHelpers}
+<urlset{attributes -> f:format.raw()}>
     <f:render section="itemsList" arguments="{items: items}"/>
 </urlset>
         
