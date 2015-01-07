@@ -1,10 +1,14 @@
 # Google Sitemap Route
 -
   name:  'Google Sitemap'
-  uriPattern: '<sitemapBaseUri>sitemap.xml'
+  uriPattern: '{node}<sitemapBaseUri>sitemap.xml'
   defaults:
-    'node':        '<rootNodePath>'
     '@package':    'TYPO3.Neos'
     '@controller': 'Frontend\Node'
     '@action':     'show'
     '@format':     'xml'
+  routeParts:
+    'node':
+      handler: 'TYPO3\Neos\Routing\FrontendNodeRoutePartHandlerInterface'
+      options:
+        onlyMatchSiteNodes: TRUE
